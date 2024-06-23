@@ -3,7 +3,7 @@ import offer1 from '../../assets/offer1.png'
 import offer2 from '../../assets/offer2.png'
 import { Box, Container } from '@mui/material'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules'
+import { Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 
 const Offers = () => {
@@ -16,7 +16,11 @@ const Offers = () => {
             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
-                modules={[Pagination]}
+                modules={[Pagination, Autoplay]}
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false
+                }}
                 pagination={{
                     clickable: true
                 }}
