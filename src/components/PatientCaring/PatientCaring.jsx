@@ -30,7 +30,7 @@ const PatientCaring = () => {
                     </Typography>
 
                     <Typography color="#77829D">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ex repellat incidunt. Eum ducimus earum sunt nisi! Fuga quis, architecto quaerat accusamus tempore nulla. Illo itaque nemo accusamus reprehenderit quibusdam?
+                        Our goal is to deliver quality of care in a courteous, respectful and compassionate manner. We hope you will allow us to care for you and we strive to be the first and best choice for healthcare. 
                     </Typography>
 
                     <List sx={{fontSize: {xs: 12, md: 20} }}>
