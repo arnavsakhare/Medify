@@ -19,7 +19,7 @@ const HeroSection = () => {
                 Connect instantly with a 27x7 specialist or choose to video visit a particular doctor.
             </Typography>
 
-            <Link>
+            <Link to='/search'>
                 <Button variant='contained' size='large' disableElevation>
                     Find Centers
                 </Button>
