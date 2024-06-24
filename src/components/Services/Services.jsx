@@ -32,7 +32,7 @@ const Services = () => {
 
         <Grid container columnSpacing={{xs: 1, md: 3}} justifyContent='center' >
             {services.map((service, idx) => (
-                <Grid item key={idx} xs={4} md={2.4}>
+                <Grid item key={idx} xs={6} md={2.4}>
                     <ServiceCard img={service.img} title={service.title}/>
                 </Grid>
             ))}
