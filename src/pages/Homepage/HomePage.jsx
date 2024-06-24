@@ -7,10 +7,14 @@ import PatientCaring from '../../components/PatientCaring/PatientCaring'
 import BlogPost from '../../components/BlogPost/BlogPost'
 import OurFamilies from '../../components/OurFamilies/OurFamilies'
 import FAQSection from '../../components/FAQSection/FAQSection'
+import NavBar from '../../components/NavBar/NavBar'
 
 const HomePage = () => {
   return (
     <Box>
+      <Box mb={4}>
+        <NavBar />
+      </Box>
 
       <Offers />
       <FindBySpecialisation />
