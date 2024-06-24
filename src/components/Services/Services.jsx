@@ -30,9 +30,9 @@ const Services = () => {
             You may be looking for
         </Typography>
 
-        <Grid container columnSpacing={{xs: 1, md: 3}} justifyContent='center' >
+        <Grid container rowSpacing={{xs: 1}} columnSpacing={{xs: 1, md: 3}} justifyContent='center' >
             {services.map((service, idx) => (
-                <Grid item key={idx} xs={6} md={2.4}>
+                <Grid item key={idx} xs={6} md={2.4} >
                     <ServiceCard img={service.img} title={service.title}/>
                 </Grid>
             ))}

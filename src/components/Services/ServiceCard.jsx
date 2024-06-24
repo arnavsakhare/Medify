@@ -9,6 +9,7 @@ const ServiceCard = ({img, title}) => {
         p={3}
         bgcolor='#FAFBFC'
         borderRadius={2}
+        sx={{height: "100%"}}
         
     >
         <Box
@@ -22,6 +23,7 @@ const ServiceCard = ({img, title}) => {
             color='#ABB6C7'
             fontWeight={400}
             fontSize={16}
+            textAlign='center'
         >
             {title}
         </Typography>

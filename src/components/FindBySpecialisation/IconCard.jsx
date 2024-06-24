@@ -11,6 +11,7 @@ const IconCard = ({img, title}) => {
         borderRadius={2}
         border={0}
         boxShadow="0 0 24px rgba(0,0,0,0.1)"
+        sx={{height: '100%'}}
     >
         <Box component="img" src={img} height={50} width={50}/>
         <Typography
