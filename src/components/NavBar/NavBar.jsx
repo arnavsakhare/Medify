@@ -106,7 +106,7 @@ const NavBar = () => {
                             variant="temporary"
                             sx={{
                                 '& .MuiDrawer-paper': {
-                                    width: "40vw",
+                                    width: "50vw",
                                     backgroundColor: '#102851',
                                     color: '#fff',
                                 },
