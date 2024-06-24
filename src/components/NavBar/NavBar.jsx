@@ -4,6 +4,7 @@ import logo from '../../assets/logo.png'
 import { Box, Container, Stack, Typography, Button, useMediaQuery, IconButton, List, ListItemButton, ListItemText, Drawer, ListItem } from '@mui/material'
 import styles from './Navbar.module.css'
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import NavigateNextRoundedIcon from '@mui/icons-material/NavigateNextRounded';
 
 
 const NavBar = () => {
@@ -27,7 +28,12 @@ const NavBar = () => {
             className={styles.drawerLinks}
         >
             <List>
-                <Link to="/search">
+
+                <IconButton sx={{color: "#fff"}} onClick={toggleDrawer(false)}>
+                    <NavigateNextRoundedIcon />
+                </IconButton>
+
+                <Link>
                     <ListItemButton>
                         <ListItemText primary="Find Doctors"/>
                     </ListItemButton>
@@ -78,7 +84,7 @@ const NavBar = () => {
     <header>
         <Box p={1} bgcolor="primary.main">
             <Typography color="#FFFFFF" textAlign="center" fontSize={14}>
-                The health and well being of our patients and their health care team will always be our first priority, so we follow the best practices for cleanliness.
+                The health and well being of our patients and their health will always be our first priority, so we follow the best practices for cleanliness.
             </Typography>
         </Box>
 
