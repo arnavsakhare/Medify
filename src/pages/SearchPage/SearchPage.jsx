@@ -133,7 +133,7 @@ const SearchPage = () => {
                     )}
                 </Stack>
 
-                <img src={cta} alt="banner" width={350} height='auto'/>
+                <img src={cta} alt="banner" width={350} height={250}/>
             </Stack>
         </Container>
       </Box>
