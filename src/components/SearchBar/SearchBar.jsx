@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router-dom'
 import { Box, Button, InputAdornment, MenuItem, Select } from '@mui/material'
 
 
-
-
 const SearchBar = () => {
 
     const [states, setStates] = useState([])
