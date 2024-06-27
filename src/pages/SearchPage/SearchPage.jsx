@@ -7,6 +7,8 @@ import icon from '../../assets/tick.png'
 import cta from '../../assets/cta.png'
 import axios from 'axios'
 import HospitalCard from '../../components/HospitalCard/HospitalCard'
+import BookingModal from '../../components/BookingModal/BookingModal'
+import CustomSnackBar from '../../components/CustomSnackBar/CustomSnackBar'
 
 
 
@@ -19,7 +21,7 @@ const SearchPage = () => {
     const [loading, setLoading] = useState(false)
     const [bookingDetails, setBookingDetails] = useState({})
     const [isModalOpen, setIsModalOpen] = useState(false)
-    const [BookingSuccess, setBookingSuccess] = useState(false)
+    const [bookingSuccess, setBookingSuccess] = useState(false)
 
     const availableSlots = {
         morning: ["11:30 AM"],
@@ -27,8 +29,9 @@ const SearchPage = () => {
         evening: ["06:00 PM", "06:30 PM", "07:00 PM", "07:30 PM"],
     }
 
-    const handleBookingModal = () => {
-
+    const handleBookingModal = (details) => {
+        setIsModalOpen(true)
+        setBookingDetails(details)
     }
 
     useEffect(() => {
@@ -103,10 +106,12 @@ const SearchPage = () => {
                 </Box>
             )}
 
-            <Stack direction={{xs: "column", md: "row"}} spacing={{xs: 4, md: 4}}>
+            <Stack alignItems='flex-start' direction={{md: "row"}}>
                 <Stack
+                    mb={{xs: 4, md: 0}}
                     spacing={3}
-                    width={{xs: 1, md: 1}}
+                    width={{xs: 1, md: "calc(100% - 384px)"}}
+                    mr='24px'
                 >
                     {hospitals.length > 0 && (
 
@@ -136,6 +141,19 @@ const SearchPage = () => {
                 <img src={cta} alt="banner" width={350} height={250}/>
             </Stack>
         </Container>
+
+        <BookingModal
+            open={isModalOpen}
+            setOpen={setIsModalOpen}
+            bookingDetails={bookingDetails}
+            showSuccessMessage={setBookingSuccess}
+        />
+
+        <CustomSnackBar
+            open={bookingSuccess}
+            setOpen={setBookingSuccess}
+            message="Booking Successful"
+        />
       </Box>
     </>
   )
